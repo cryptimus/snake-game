@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Snake</title>
+
+    <style>
+      body{
+        color: white;
+        display: flex;
+        text-align: center;
+      }
+      h1{
+        font-size: 60px;
+      }
+      p{
+        font-size: 40px;
+      }
+     .scorecard{
+      padding-top: 50px;
+        width: 20%;
+      }
+      .score{
+        margin: 0;
+        padding: 10px;
+        font-size: 60px;
+      }
+      .canvasdiv{
+        width: 60%;
+        padding-top: 20px;
+        display: block;
+      }
+      canvas{
+          margin: 0px;
+      }
+      .gameLevel{
+        margin: 0px;
+        padding: 0px;
+        padding-top: 50px;
+        width: 20%;
+      }
+      .gameLevel>div{
+        text-align: left;
+        padding-left: 70px;
+      }
+    </style>
+
+  </head>
+
+  <body style=" background-color: black">
+
+    <div id="scorecard" class="scorecard">
+      <h1>Score</h1>
+      <div>
+          <img src="images/food.png" width="32px" height="32px">
+          <p id="score" class="score" >0</p>
+      </div>
+    </div>  
+
+    <div class="canvasdiv">
+
+      <canvas id="canvas" style="border: 10px solid #4a752c;"></canvas>
+
+    </div>
+
+    <div id="gameLevel" class="gameLevel">
+      <h1>Difficulty<br>Level</h1>
+      <p class="levelDisplay" id="levelDisplay" style="border: 1px dashed blue;">Medium</p>
+      <div id="levelInput">
+        <form action="" onclick = "setLevel()">
+            <input type="radio" name="level" value="easy"> EASY<br>
+            <input type="radio" name="level" value="medium"> MEDIUM<br>
+            <input type="radio" name="level" value="hard"> HARD
+        </form>
+          
+      </div>
+    </div>
+
+      
+
+       <script src="snake.js"></script>
+  </body>
+</html>
